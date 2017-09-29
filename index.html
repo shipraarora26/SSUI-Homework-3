@@ -11,11 +11,20 @@
   <link href="https://fonts.googleapis.com/css?family=Bad+Script|Lato" rel="stylesheet">
 
   <!--The following line loads in your JS script-->
-  <script src="js/todo.js"></script>
+  <script src="js/todo.js" type="text/javascript"></script>
 </head>
 
 <body>
   <h1>Welcome to my store!</h1>
+  <button onclick="addNewList()">Add New List</button>
+  <br>
+  <p>Bread 1</p>
+  <button onclick="addABread()">+</button>
+  <button onclick="removeABread()">-</button>
+  <br>
+  <p>Bread 2</p>
+  <button onclick="addABread()">+</button>
+  <button onclick="removeABread()">-</button>
   <p>This store sells all kinds of items. We have old items and new items. Some items are more expensive than others.</p>
   <img src="./resources/images/whatsInStore.png" class="starterImage" alt="a picture of a box that says what's in store for your store"></img>
   <p>Feel free to delete this content! This is only to put down some html tags and css to get you started.</p>
