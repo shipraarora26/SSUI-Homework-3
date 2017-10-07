@@ -4,24 +4,16 @@
   <meta charset="utf-8">
   <title>The Products Page</title>
 
-  <!--The following line loads in your CSS style sheet-->
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/nav.css">
 
-  <!--The following line loads in 2 fonts from Google Fonts: Bad Script and Lato-->
-  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Lato" rel="stylesheet">
-
-  <!--The following line loads in your JS script-->
-  <script src="js/todo.js" type="text/javascript"></script>
+  <script src="js/shopping.js" type="text/javascript"></script>
 </head>
 
 <body>
-
-<div class="navContainer">
-  <ul>
-    <svg  onclick="location.href='index.html'" id="logo" width="280px" height="30px" viewBox="0 0 279 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-        <desc>Created with Sketch.</desc>
+  <div class="navContainer">
+    <ul>
+      <svg  onclick="location.href='index.html'" id="logo" width="280px" height="30px" viewBox="0 0 279 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs></defs>
         <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="Tablet-Portrait" transform="translate(-173.000000, -43.000000)" fill="#FFFFFF">
@@ -37,17 +29,14 @@
                 </g>
             </g>
         </g>
-    </svg>
-    <div id="navLinksRight">
-      <li><a href="index.html">Home</a></li>
-      <li><a class="activeNav" href="products.html">Menu</a></li>
-      <li><a href="contactUs.html">Contact Us</a></li>
+      </svg>
+      <div id="navLinksRight">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="activeNav" href="products.html">Menu</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
 
-      <li><a href="shoppingCart.html">
-
-        <svg onclick="location.href='shoppingCart.html'" id="shoppingCart" width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-          <desc>Created with Sketch.</desc>
+        <li><a href="shoppingCart.html">
+        <svg onclick="location.href='shoppingCart.html'" class="shoppingCartIcon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <defs></defs>
           <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.850430254">
               <g id="Home" transform="translate(-947.000000, -49.000000)" fill-rule="nonzero" fill="#FFFFFF">
@@ -57,127 +46,125 @@
               </g>
           </g>
         </svg>
-        <!-- <input id="shoppingCartValue" type="button" value="0"> -->
-      </a>
       <span id="shoppingCartValue">0</span>
-
+      </a>
       </li>
     </div>
-
-  </ul>
-</div>
-
-
+    </ul>
+  </div>
 
   <h1>Menu</h1>
 
+  <div class="items">
+    <div class="flavor" onclick="location.href='tmpl/bacon.html'" id="item[bacon]">
+      <img class="flavorImg" src="./resources/images/bacon.jpg">
+      Bacon<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[bacon]')">Add to Cart</button>
+    </div>
 
-<div class="shoppingCartItems">
-  <div class="flavor" onclick="location.href='tmpl/bacon.html'">
-    <img class="flavorImg" src="./resources/images/bacon.jpg">
-    Bacon<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
+    <div class="flavor" onclick="location.href='tmpl/birthday.html'" id="item[birthday]">
+      <img class="flavorImg" src="./resources/images/birthday.jpg">
+      Birthday Cake<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[birthday]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/blackberry.html'" id="item[blackberry]">
+      <img class="flavorImg" src="./resources/images/blackberry.jpg">
+      Blackberry<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[blackberry]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/buttermilk.html'" id="item[buttermilk]">
+      <img class="flavorImg" src="./resources/images/buttermilk.jpg">
+      Buttermilk<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[buttermilk]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/caramelPecan.html'" id="item[caramelPecan]">
+      <img class="flavorImg" src="./resources/images/caramelPecan.jpg">
+     Caramel Pecan<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[caramelPecan]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/carrotCake.html'" id="item[carrotCake]">
+      <img class="flavorImg" src="./resources/images/carrotCake.jpg">
+      Carrot Cake<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[carrotCake]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/cranberry.html'" id="item[cranberry]">
+      <img class="flavorImg" src="./resources/images/cranberry.jpg">
+      Cranberry<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[cranberry]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/lemonLavender.html'" id="item[lemonLavender]">
+      <img class="flavorImg" src="./resources/images/lemonLavender.jpg">
+      Lemon Lavendar<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[lemonLavender]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/mapleApplePecan.html'" id="item[mapleApplePecan]">
+      <img class="flavorImg" src="./resources/images/mapleApplePecan.jpg">
+      Maple Apple Pecan<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[mapleApplePecan]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/original.html'" id="item[original]">
+      <img class="flavorImg" src="./resources/images/original.jpg">
+      Original<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[original]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/originalGlutenFree.html'" id="item[originalGlutenFree]">
+      <img class="flavorImg" src="./resources/images/originalGlutenFree.jpg">
+      Original (Gluten-Free)<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[originalGlutenFree]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/originalVegan.html'" id="item[originalVegan]">
+      <img class="flavorImg" src="./resources/images/originalVegan.jpg">
+      Original (Vegan)<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[originalVegan]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/pumpkinSpice.html'" id="item[pumpkinSpice]">
+      <img class="flavorImg" src="./resources/images/pumpkinSpice.jpg">
+      Pumpkin Spice<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[pumpkinSpice]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/strawberryRhubarb.html'" id="item[strawberryRhubarb]">
+      <img class="flavorImg" src="./resources/images/strawberryRhubarb.jpg">
+      Strawberry Rhubarb<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[strawberryRhubarb]')">Add to Cart</button>
+    </div>
+
+    <div class="flavor" onclick="location.href='tmpl/walnut.html'" id="item[walnut]">
+      <img class="flavorImg" src="./resources/images/walnut.jpg">
+      Walnut<br>
+      <span>$5.99</span>
+      <button onclick="addABread('item[walnut]')">Add to Cart</button>
+    </div>
   </div>
 
-  <div class="flavor" onclick="location.href='tmpl/birthday.html'">
-    <img class="flavorImg" src="./resources/images/birthday.jpg">
-    Birthday Cake<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/blackberry.html'">
-    <img class="flavorImg" src="./resources/images/blackberry.jpg">
-    Blackberry<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/buttermilk.html'">
-    <img class="flavorImg" src="./resources/images/buttermilk.jpg">
-    Buttermilk<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/caramelPecan.html'">
-    <img class="flavorImg" src="./resources/images/caramelPecan.jpg">
-   Caramel Pecan<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/carrotCake.html'">
-    <img class="flavorImg" src="./resources/images/carrotCake.jpg">
-    Carrot Cake<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/cranberry.html'">
-    <img class="flavorImg" src="./resources/images/cranberry.jpg">
-    Cranberry<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/lemonLavender.html'">
-    <img class="flavorImg" src="./resources/images/lemonLavender.jpg">
-    Lemon Lavendar<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/mapleApplePecan.html'">
-    <img class="flavorImg" src="./resources/images/mapleApplePecan.jpg">
-    Maple Apple Pecan<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/original.html'">
-    <img class="flavorImg" src="./resources/images/original.jpg">
-    Original<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/originalGlutenFree.html'">
-    <img class="flavorImg" src="./resources/images/originalGlutenFree.jpg">
-    Original (Gluten-Free)<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/originalVegan.html'">
-    <img class="flavorImg" src="./resources/images/originalVegan.jpg">
-    Original (Vegan)<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/pumpkinSpice.html'">
-    <img class="flavorImg" src="./resources/images/pumpkinSpice.jpg">
-    Pumpkin Spice<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/strawberryRhubarb.html'">
-    <img class="flavorImg" src="./resources/images/strawberryRhubarb.jpg">
-    Strawberry Rhubarb<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
-
-  <div class="flavor" onclick="location.href='tmpl/walnut.html'">
-    <img class="flavorImg" src="./resources/images/walnut.jpg">
-    Walnut<br>
-    <span>$5.99</span>
-    <button onclick="addABread()">Add to Cart</button>
-  </div>
- </div>
-  
 </body>
 </html>
+
+<script type="text/javascript">
+  setShoppingCartCount()
+</script>

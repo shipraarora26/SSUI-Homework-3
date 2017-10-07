@@ -4,24 +4,16 @@
     <meta charset="utf-8">
     <title>Shopping Cart Page</title>
 
-    <!--The following line loads in your CSS style sheet-->
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/nav.css">
 
-    <!--The following line loads in 2 fonts from Google Fonts: Bad Script and Lato-->
-    <link href="https://fonts.googleapis.com/css?family=Bad+Script|Lato" rel="stylesheet">
-
-    <!--The following line loads in your JS script-->
-    <script src="js/todo.js" type="text/javascript"></script>
+    <script src="js/shopping.js" type="text/javascript"></script>
   </head>
 
   <body>
     <div class="navContainer">
       <ul>
-
         <svg onclick="location.href='index.html'" id="logo" width="280px" height="30px" viewBox="0 0 279 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-            <desc>Created with Sketch.</desc>
             <defs></defs>
             <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="Tablet-Portrait" transform="translate(-173.000000, -43.000000)" fill="#FFFFFF">
@@ -42,12 +34,8 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Menu</a></li>
           <li><a href="contactUs.html">Contact Us</a></li>
-
-          <li><a  class="activeNav" href="shoppingCart.html">
-
-            <svg onclick="location.href='shoppingCart.html'" id="shoppingCart" width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-              <desc>Created with Sketch.</desc>
+          <li><a href="shoppingCart.html">
+            <svg onclick="location.href='shoppingCart.html'" class="shoppingCartIcon" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs></defs>
               <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.850430254">
                   <g id="Home" transform="translate(-947.000000, -49.000000)" fill-rule="nonzero" fill="#FFFFFF">
@@ -57,42 +45,20 @@
                   </g>
               </g>
             </svg>
+            <span id="shoppingCartValue">0</span>
           </a>
-          <span id="shoppingCartValue">0</span>
-
           </li>
         </div>
-
       </ul>
     </div>
 
     <h1>Your Shopping Cart</h1>
-
     <button class="checkout" onclick="end()">Checkout</button>
-
-    <div class="shoppingCartItems">
-      <div class="flavor" id="item[1]">
-        <img class="flavorImg" src="./resources/images/strawberryRhubarb.jpg">
-        Strawberry Rhubarb<br>
-        <span>$5.99</span>
-        <button onclick="removeABread('item[1]')">Remove</button>
-      </div>
-      <div class="flavor" id="item[2]">
-        <img class="flavorImg" src="./resources/images/caramelPecan.jpg">
-        Caramel Pecan<br>
-        <span>$5.99</span>
-        <button onclick="removeABread('item[2]')">Remove</button>
-      </div>
-      <div class="flavor" id="item[3]">
-        <img class="flavorImg" src="./resources/images/originalVegan.jpg">
-        Original (Vegan)<br>
-        <span>$5.99</span>
-        <button onclick="removeABread('item[3]')">Remove</button>
-      </div>
-    </div>
+    <div class="items" id="checkoutCart"></div>
   </body>
 </html>
 
 <script type="text/javascript">
-  countItemsOnPage()
+  setShoppingCartCount();
+  addItemsToShoppingCart();
 </script>

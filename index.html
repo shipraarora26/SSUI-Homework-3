@@ -4,23 +4,16 @@
   <meta charset="utf-8">
   <title>Bun Bun Bake Shop</title>
 
-  <!--The following line loads in your CSS style sheet-->
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/nav.css">
 
-  <!--The following line loads in 2 fonts from Google Fonts: Bad Script and Lato-->
-  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Lato" rel="stylesheet">
-
-  <!--The following line loads in your JS script-->
-  <script src="js/todo.js" type="text/javascript"></script>
+  <script src="js/shopping.js" type="text/javascript"></script>
 </head>
 
 <body>
   <div class="navContainer">
     <ul>
       <svg onclick="location.href='index.html'" id="logo" width="280px" height="30px" viewBox="0 0 279 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-          <desc>Created with Sketch.</desc>
           <defs></defs>
           <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="Tablet-Portrait" transform="translate(-173.000000, -43.000000)" fill="#FFFFFF">
@@ -43,10 +36,7 @@
         <li><a href="contactUs.html">Contact Us</a></li>
 
         <li><a href="shoppingCart.html">
-
-          <svg onclick="location.href='shoppingCart.html'" id="shoppingCart" width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-            <desc>Created with Sketch.</desc>
+          <svg onclick="location.href='shoppingCart.html'" class="shoppingCartIcon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs></defs>
             <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.850430254">
                 <g id="Home" transform="translate(-947.000000, -49.000000)" fill-rule="nonzero" fill="#FFFFFF">
@@ -56,9 +46,8 @@
                 </g>
             </g>
           </svg>
-        </a>
-        <span id="shoppingCartValue">0</span>
-
+          <span id="shoppingCartValue">0</span>
+          </a>
         </li>
       </div>
 
@@ -68,8 +57,10 @@
  <h1 class="welcome">Welcome to Bun Bun Bake Shop</h1>
   <span>Est. 1982</span>
 
-
   <span class="welcomeText"> We are a small bakery that specializes in cinnamon rolls, from our famous classic cinnamon roll to a variety of   artisan   flavors. Our shop is located in Pittsburgh, PA, but we ship   fresh rolls to anywhere in the US!</span>
   <button onclick="location.href='products.html'">Explore our Menu</button>
 </body>
 </html>
+<script type="text/javascript">
+  setShoppingCartCount()
+</script>

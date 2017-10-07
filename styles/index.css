@@ -1,26 +1,26 @@
 
-body{
-  text-align: center;
-  margin: auto;
-  background: url(../resources/images/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+/*common to all pages*/
+body {
+	text-align: center;
+	margin: auto;
+	background: url(../resources/images/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 body:before {
-    content: " ";
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    background-color: black;
-  opacity: .76; 
+	content: " ";
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	background-color: black;
+	opacity: .76;
 }
-
 
 h1 {
 	margin: 20px 0 0 0;
@@ -55,6 +55,7 @@ svg#logo {
 	cursor: pointer;
 }
 
+/*welcome page*/
 .welcome {
 	margin: 100px 0 0 0;
 }
@@ -64,8 +65,8 @@ svg#logo {
 	font-size: 17px;
 }
 
-.shoppingCartItems {
-	width: 100%;
+/*menu items*/
+.items {
 	padding: 10px;
 	text-align: center;
 	font-family: AvenirNext-Regular;
@@ -86,14 +87,7 @@ svg#logo {
 	height: 165px;
 }
 
-.checkout {
-	float: right;
-    margin: 0 25px 0 100%;
-}
-
-
 /*contact us page*/
-
 h2 {
 	margin: 0;
 	font-family: AvenirNext-Regular;

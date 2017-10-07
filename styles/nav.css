@@ -36,24 +36,31 @@ li { display: inline; }
 
 svg#shoppingCart {
 	display: inline;
-	/*float: right;*/
-	/*margin: 19px 10px 19px 19px;*/
 	height: 23px;
 	width: auto;
 	cursor: pointer;
 }
 
-#navLinksRight{
+#navLinksRight {
   float: right;
 }
 
-span#shoppingCartValue{
+span#shoppingCartValue {
 	width: 20px;
-	margin-right: 10px;
-	margin-left: -30px;
+	margin-right: 12px;
 	font-family: AvenirNext-Regular;
 	display: inline-block;
 }
 
+.shoppingCartIcon {
+   width: 30px;
+  height: 31px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
 
+.checkout {
+	float: right;
+    margin: 0 25px 0 100%;
+}
 
