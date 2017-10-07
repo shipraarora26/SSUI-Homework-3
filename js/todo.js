@@ -1,22 +1,34 @@
-var a=0;
+var a = 0;
 
-
-
-function addNewList() {
-    alert('good morning!');
+function countItemsOnPage() {
+    var items = document.querySelectorAll('.shoppingCartItems .flavor');
+    var shoppingCartValue = document.getElementById("shoppingCartValue");
+    shoppingCartValue.innerHTML = items.length;
 }
 
 function addABread() {
+    event.stopPropagation();
     a++;
-    console.log(a); 
+ 	updateShoppingCart();
 }
 
-function removeABread() {
-    if (a > 0) {
-    	a--;
-    	var x = document.getElementById("myBtn");
-    	console.log(a); 
+function removeABread(item) {
+    var items = document.querySelectorAll('.shoppingCartItems .flavor');
+    var shoppingCartValue = document.getElementById("shoppingCartValue");
+
+    if (items.length > 0) {
+        document.getElementById(item).remove();
+    	countItemsOnPage()
 	} else {
-		alert("you dont have any items in your cart yet!")
+		alert("You dont have any items in your cart yet!");
 	}
+}
+
+function updateShoppingCart() {
+	var s = document.getElementById("shoppingCartValue");
+  	s.innerHTML = a;
+}
+
+function end() {
+    alert("This is the end of my prototype! Better luck buying your cinnamon rolls next time!")
 }
