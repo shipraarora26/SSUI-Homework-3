@@ -61,6 +61,6 @@ function updateShoppingCart() {
 }
 
 function end() {
-    alert("This is the end of my prototype! Better luck buying your cinnamon rolls next time!");
+    alert("This is the end of my prototype! You shopping cart has been reset! Better luck buying your cinnamon rolls next time!");
     localStorage.clear();
 }
