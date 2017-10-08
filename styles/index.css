@@ -79,6 +79,7 @@ svg#logo {
 	display: inline-block;
 	width: 20%;
 	margin: 20px;
+	cursor: pointer;
 }
 
 .flavorImg {
